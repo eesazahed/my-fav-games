@@ -10,11 +10,6 @@ body {
   align-items: center;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
 footer {
   text-align: center;
   margin: 4rem 0;
@@ -55,6 +50,7 @@ footer a {
 
 .game-title {
   font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .games {
@@ -79,7 +75,6 @@ footer a {
 }
 
 .game-img-container {
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +86,14 @@ footer a {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: 0.25s;
+}
+
+.game-img:hover {
+  scale: 1.1;
+  filter: drop-shadow(0 0 5px #00ffd9cc);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -107,9 +110,5 @@ footer a {
   .game {
     border: none;
     background: #343434;
-  }
-
-  a {
-    color: #0092f3;
   }
 }
