@@ -4,10 +4,8 @@ body {
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 
 footer {
@@ -55,15 +53,13 @@ footer a {
 
 .games {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin: 2rem 0rem;
 }
 
 .game {
-  flex: 1;
   padding: 0rem 1rem 1rem 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
@@ -75,11 +71,10 @@ footer a {
 }
 
 .game-img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  margin: 2rem 0rem;
+  display: grid;
+  place-items: center;
+  max-width: 300px;
+  margin: 2rem auto;
 }
 
 .game-img {
@@ -100,7 +95,7 @@ footer a {
   body {
     color-scheme: dark;
     color: white;
-    background: #1d1d1d;
+    background: linear-gradient(#2a0163, #2112ec);
   }
 
   .container {
@@ -110,5 +105,37 @@ footer a {
   .game {
     border: none;
     background: #343434;
+  }
+}
+
+.fallingItem {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  color: white;
+  opacity: 1;
+  pointer-events: none;
+  animation: fall linear infinite, fadeOut ease-in;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes fadeOut {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  #title {
+    font-size: 2rem;
   }
 }
