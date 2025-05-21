@@ -171,8 +171,14 @@ a:hover {
   gap: 0.5rem;
 }
 
-.links {
+.links-container {
   text-align: center;
+}
+
+.links {
+  width: 16rem;
+  margin: 2rem auto;
+  text-align: left;
 }
 
 @keyframes fall {
@@ -198,20 +204,42 @@ a:hover {
 
 #fort {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://cdn1.epicgames.com/offer/fn/FNBR_35-00_C6MS1_EGS_Launcher_KeyArt_FN_Blade_2560x1440_2560x1440-8fd35061502b51f1df276474d28e7f59);
+    url(./assets/images/fort.png);
 }
 
 #chess {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://images.chesscomfiles.com/uploads/v1/chess_term/2383de18-b8b2-11eb-a4b4-4bc987a00afe.d34321ae.5000x5000o.cdd6265caf62.png);
+    url(./assets/images/chess.png);
 }
 
 #wonder {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://i.guim.co.uk/img/media/4f4f0fc6a0a22276f7b0418fdea63078e668994d/45_0_1500_900/master/1500.jpg?width=465&dpr=1&s=none&crop=none);
+    url(./assets/images/wonder.png);
 }
 
 #factorio {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000056818/c700b4cc22a81c2099335d83fe379e9cdc6afd190a9985f74ba8f7e589f4ffd2);
+    url(./assets/images/factorio.png);
+}
+
+footer img {
+  cursor: pointer;
+  max-height: 5rem;
+  max-width: 5rem;
+  border-radius: 100%;
+  animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(none);
+  }
+  50% {
+    filter: drop-shadow(0 0 5px #00ffd9cc);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(none);
+  }
 }
