@@ -6,6 +6,11 @@ body {
   padding: 0;
   display: grid;
   place-items: center;
+  color-scheme: dark;
+  color: white;
+  background: linear-gradient(#6405b8, #1100fd);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 footer {
@@ -13,24 +18,31 @@ footer {
   margin: 4rem 0;
 }
 
-footer a {
+a {
   text-decoration: none;
-  color: limegreen;
+  color: lime;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
   max-width: 66.66rem;
   margin: 5rem 2rem;
-  background-color: #fff;
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
 }
 
 #title {
   font-size: 3.5rem;
   margin-bottom: 2rem;
-  background-image: linear-gradient(to right, #ff0b0b, #009dff);
+  background-image: linear-gradient(to right, #0bff54, #00ffe1);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -63,7 +75,8 @@ footer a {
   padding: 0rem 1rem 1rem 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  background-color: #f9f9f9;
+  border: none;
+  background: #343434;
 }
 
 .game p {
@@ -87,25 +100,8 @@ footer a {
 }
 
 .game-img:hover {
-  scale: 1.1;
+  scale: 1.15;
   filter: drop-shadow(0 0 5px #00ffd9cc);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color-scheme: dark;
-    color: white;
-    background: linear-gradient(#2a0163, #2112ec);
-  }
-
-  .container {
-    background: #242424;
-  }
-
-  .game {
-    border: none;
-    background: #343434;
-  }
 }
 
 .fallingItem {
@@ -117,6 +113,66 @@ footer a {
   pointer-events: none;
   animation: fall linear infinite, fadeOut ease-in;
   z-index: 9999;
+}
+
+.reviews {
+  margin: 4rem auto;
+}
+
+.reviews-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 4rem;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-card {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .review-card {
+    width: 50%;
+  }
+}
+
+.review-content {
+  margin: 2rem;
+  padding: 2rem;
+  transition-duration: 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 17.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.review-content:hover {
+  scale: 1.15;
+  filter: drop-shadow(0 0 5px #00ffd9cc);
+}
+
+.review-stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 1.875rem;
+  gap: 0.5rem;
+}
+
+.links {
+  text-align: center;
 }
 
 @keyframes fall {
@@ -138,4 +194,24 @@ footer a {
   #title {
     font-size: 2rem;
   }
+}
+
+#fort {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://cdn1.epicgames.com/offer/fn/FNBR_35-00_C6MS1_EGS_Launcher_KeyArt_FN_Blade_2560x1440_2560x1440-8fd35061502b51f1df276474d28e7f59);
+}
+
+#chess {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://images.chesscomfiles.com/uploads/v1/chess_term/2383de18-b8b2-11eb-a4b4-4bc987a00afe.d34321ae.5000x5000o.cdd6265caf62.png);
+}
+
+#wonder {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://i.guim.co.uk/img/media/4f4f0fc6a0a22276f7b0418fdea63078e668994d/45_0_1500_900/master/1500.jpg?width=465&dpr=1&s=none&crop=none);
+}
+
+#factorio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000056818/c700b4cc22a81c2099335d83fe379e9cdc6afd190a9985f74ba8f7e589f4ffd2);
 }
